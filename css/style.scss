@@ -66,7 +66,6 @@ body {
 @mixin title {
     font-size: 5.625rem; /*90px*/
     font-family: 'ralewaybold';
-
 }
 
 .head {
@@ -142,7 +141,6 @@ body {
          transform: translateX(-20%);
          z-index: 10;
       }
-
 }
 
 .home {
@@ -175,9 +173,9 @@ body {
 }
 
 .about-us {
-         background-color: #00bcbc;
-         @include flex;
-         padding: 15px;
+    background-color: #00bcbc;
+    @include flex;
+    padding: 15px;
 
     &__image {
          display: none;
@@ -202,7 +200,6 @@ body {
          padding-top: 0.5em;
          padding-bottom: 0.5em;
     }
-
 }
 
 .services {
@@ -292,7 +289,7 @@ body {
         padding-bottom: 0.4em;
     }
 
-    .gallery__image {
+    &__image {
         width: 100%;
         height: auto;
         
@@ -358,7 +355,6 @@ body {
             background-color: #96b92c;
         }
     }
-
 }
 
 .blog {
@@ -531,9 +527,9 @@ body {
        ::-ms-input-placeholder { /* Microsoft Edge */
          color: #fff;
          }
-    }
+     }
 
-    &__info {
+     &__info {
         text-align: center;
         
         &--bolder {
@@ -547,7 +543,7 @@ body {
             font-family: 'ralewaylight';
             font-size: 2rem;
         }
-    }
+     }
 }
 
 .cahee {
@@ -573,18 +569,23 @@ body {
 
 @media screen and (min-width: 1230px) {
 
+    .container{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
 
     @mixin button {
-    height: 55px;
-    width: 200px;
-    text-transform: uppercase;
-    line-height: 55px;
-    font-family: 'ralewaylight';
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    border: none;
-    box-shadow: -3px 3px 6px 0 rgb(154, 154, 156);
+     height: 55px;
+     width: 200px;
+     text-transform: uppercase;
+     line-height: 55px;
+     font-family: 'ralewaylight';
+     color: #fff;
+     font-size: 20px;
+     text-align: center;
+     border: none;
+     box-shadow: -3px 3px 6px 0 rgb(154, 154, 156);
     }
 
     .container {
@@ -686,13 +687,13 @@ body {
         background-size: cover;
         position: relative;     
 
-    &__title {
+     &__title {
          font-size: 60px;
          font-family: 'ralewayheavy';
          padding-bottom: 0.53em;
-    }
+     }
 
-    &__text {
+     &__text {
         display: inline-block;
         width: 33.33%;
         font-size: 17px;
@@ -700,22 +701,22 @@ body {
         line-height: 1.5;
         padding-left: 0;    
         margin-left: 0;
-    }
+     }
 
-    &__btn {
+     &__btn {
          background-color: #ff6033;
          @include button;
          margin-bottom: 4.5em;
-    }
+     }
 
-    &__scroll {
+     &__scroll {
          display: block;
          position: absolute;
          top: 91.4%;  
          left: 50%;
          transform: transitionX(-50%);
          transform: transitionY(-8.6%);
-    }
+     }
     }
 
     .about-us {
@@ -769,22 +770,22 @@ body {
         background-color: #70bfff;
      padding: 179px 0 151px;
 
-    .container {
+     .container {
          display: flex;
-    flex-direction: row;
-    -webkit-justify-content: space-between;
+     flex-direction: row;
+     -webkit-justify-content: space-between;
             justify-content: space-between;
-    align-content: center;
-    text-align: center;
-    padding: 0 15px;
+     align-content: center;
+     text-align: center;
+     padding: 0 15px;
          
-    }
+     }
 
-    &__list {
+     &__list {
          margin: 0 ;
-    }
+     }
 
-    &__item {
+     &__item {
          display: flex;
          justify-content: space-between;
          color: #262626;
@@ -825,9 +826,9 @@ body {
              margin-top: 20px;
         } 
        
-    }
+     }
 
-    &__title {
+     &__title {
         width: 50%;
         font-size: 90px;
         font-family: 'ralewaybold';
@@ -850,14 +851,12 @@ body {
             max-width: 100%;
             
         }
-    }
+     }
     }
 
     .gallery {
-
-
         background-color: #ffe92f;
-        padding: 94px 0 110px;
+        padding: 85px 0 115px;
         
         .container {
             padding: 0 15px;
@@ -881,43 +880,65 @@ body {
         transform: translateX(-50%);
      }
 
-
-
-
      &__btn {
         @include button;
         margin-left: calc(50% - 100px);
         margin-top: 0.5em;
      }
+
+     .row {
+         display: flex;
+         
+         .col-12 {
+             width: 100%;
+             
+             img {
+                max-width: 100%;
+             }
+         }
+         
+         .col-8 {
+             width: 66.66%;
+             
+             img {
+                max-width: 100%;
+             }
+         }
+
+         .col-6 {
+             width: 50%;
+             
+             img {
+                max-width: 100%;
+             }
+         }
+
+         .col-4 {
+             width: 33.33%;
+             
+             img {
+                max-width: 100%;
+             }
+         }
      }
+    }
 
     .subscribe {
-        @include flex;
         padding: 141px 0 156px;
         background-image: url(../img/s-subscribe/bg-subscribe.png);
         background-repeat: no-repeat;
         background-size: cover;
         height: 500px;
         background-position: top right;
-        
-        .container {
-            padding: 0 15px;
-        }
     
         &__title {
-            font-family: 'ralewaybold';
             font-size: 40px;
-            text-transform: capitalize;
-            text-align: left;
             padding-bottom: 0.75em;
         }
 
         &__text {
             font-size: 17px;
             text-align: left;
-            font-family: 'ralewaylight';
-            line-height: 1.5;
-            font-weight: 700;
             padding-bottom: 1.77em;
             width: 47%;
         
@@ -932,29 +953,20 @@ body {
                 width: 570px;
                 height: 55px;
                 padding: 0.5em;
-                background: none;
-                border: 1px solid #000;
                 box-sizing: border-box;
             }
 
             button {
                 @include button;
-                background-color: #96b92c;
                 margin-left: 1.5em;
         }
      }
+    }
 
     .blog {
-<<<<<<< HEAD
      background-color: #b07cf7;
      color: #fff;
      padding: 45px 100px;
-=======
-    background-color: #b07cf7;
-    color: #fff;
-    padding: 45px 100px;
->>>>>>> somemthing
-
     
      &__title {
         font-size: 90px;
@@ -1037,7 +1049,7 @@ body {
             left: 33px;
             bottom: 59px;
         }
-<<<<<<< HEAD
+
      }
 
      &__info + &__info {
@@ -1049,88 +1061,81 @@ body {
         background-color: #f72b3b;
         margin-top: 3em;
      }
-     } 
-
-
-
-
-
-
-=======
     }
 
-    &__info + &__info {
-        margin-top: 30px;
+    .contact {
+     background-image: url(../img/s-contact-us/contact-bg.png);
+     padding: 100px 0 120px;
+    
+     &__title {
+        font-size: 90px;
+        padding-bottom: 0.47em;
+     }
+
+     &__text {
+        font-size: 17px;
+        text-align: center;
+        width: 29%;
+        padding-bottom: 2.65em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+     }
+
+     .row {
+        display: flex;
+            
+        .col-6 {
+            width: 50%;
+        }
+     }
+
+     &__form {
+        input, textarea {
+            height: 50px;
+            width: 500px;
+            font-size: 15px;
+            margin: 0.7em 0;
+            padding: 0.35em;
+            border-left: 6px solid transparent;
+            outline: transparent;
+            font-family: 'ralewaybold';
+            
+            &:focus {
+               border-left: 6px solid #355b82;
+               background-color: rgb(0, 196, 196);
+            }
+
+        }
+     }
+
+        textarea {
+            height: 250px;
+            padding-top: 0.7em;
+        }
+
+        [type=submit] {
+            display: none;
+        }
+
+        &__info {
+            padding-left: 150px;
+
+        &--bolder {
+            text-transform: uppercase;
+            font-family: 'ralewaybold';
+            padding: 0.45em 0;
+            font-size: 17px;
+            text-align: left;
+        }
+
+        &--address {
+            font-family: 'ralewaylight';
+            font-size: 20px;
+            text-align: left;
+        }
+     }
     }
 
-    &__btn {
-        @include button;
-        background-color: #f72b3b;
-        margin-top: 3em;
-    }
-} 
-
-
+    
 }
->>>>>>> somemthing
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
